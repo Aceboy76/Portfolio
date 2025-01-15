@@ -1,4 +1,4 @@
-import { Menu, Github, FacebookIcon, Facebook, Mail } from 'lucide-react';
+import { Menu, Github, Facebook, Mail } from 'lucide-react';
 import {
     DropdownMenu,
     DropdownMenuContent,
