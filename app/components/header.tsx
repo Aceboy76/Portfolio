@@ -9,21 +9,16 @@ import {
 } from "../components/ui/dropdown-menu"
 import Navbar from './navbar';
 import { Button } from './ui/button';
-import { useState } from 'react';
 import { Switch } from './ui/switch';
 
 
+
 export default function Header() {
-    const [isDark, setDark] = useState<boolean>(true)
-
-    const toggleTheme = (checked: boolean) => {
-        setDark(checked)
-    }
-
 
     return (
         <>
-            <div className="bg-[#1C2321] w-screen h-screen fira-code">
+            <div className={`bg-[var(--background)] w-screen h-screen fira-code`}>
+
                 {/* mobile */}
 
                 <div className='w-full h-full p-5 space-y-5 laptop:hidden'>
@@ -37,8 +32,6 @@ export default function Header() {
 
                         <div className='flex items-center space-x-3'>
                             <Switch className='w-14 h-7 '
-                                checked={isDark} // Dynamically sets the state (checked or unchecked)
-                                onCheckedChange={toggleTheme} // Toggles the state when switched
                             />
                             <DropdownMenu>
                                 <DropdownMenuTrigger>
@@ -87,20 +80,20 @@ export default function Header() {
 
                     <div className='flex flex-row'>
                         <div className='w-1/2 flex flex-col justify-center'>
-                            <div className='text-xl text-[#D6F5FF]'>
+                            <div className='text-xl text-[var(--text-xl)]'>
                                 Hi!, my name is
                             </div>
-                            <div className='text-5xl font-semibold text-[#E57A44] mt-4'>
+                            <div className='text-5xl font-semibold text-[var(--text-5)] mt-4'>
                                 Harth Pama Palaras
                             </div>
-                            <div className='text-3xl font-semibold  text-[#E3D985] mt-10'>
+                            <div className='text-3xl font-semibold  text-[var(--text-3xl)] mt-10'>
                                 Creating web solutions
                             </div>
-                            <div className='text-xl text-[#D6F5FF] '>
+                            <div className='text-xl text-[var(--text-xl)] '>
                                 Fresh graduate and passionate programmer eager to create dynamic, user-friendly solutions and grow as a full stack developer.
                             </div>
                             <div className='mt-20'>
-                                <Button className='text-[#E57A44] text-2xl font-bold p-6 transition-transform  ease-in-out hover:scale-110 border-2 border-[#E3D985] hover:text-[#D6F5FF] z-10 absolute'>Check my resume!</Button>
+                                <Button className='bg-[var(--background)] text-[var(--focusBtnText)] text-2xl font-bold p-6 transition-transform  ease-in-out hover:scale-110 border-2 border-[var(--focusBtnBorder)] hover:text-[var(--focusBtnHover)] z-10 absolute' variant={'secondary'}>Check my resume!</Button>
                             </div>
                         </div>
 

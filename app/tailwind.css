@@ -3,9 +3,22 @@
 @tailwind utilities;
 
 
+
+*{
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fira-code {
+    font-family: "Fira Code", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
+  
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: #ffffff;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
@@ -30,10 +43,19 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --focusBtnBorder: #2a9031;
+    --focusBtnText: #338337;
+    --focusBtnHover: #356237;
+    --text-5: #c3674b;
+    --text-xl: #393939;
+    --text-3xl: #d6c52d;
+    --NavBarIcon:#8c5bd2;
+    --NavBarLink:#8c5bd2;
+
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background:#1C2321;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -57,15 +79,17 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    --text-5: #E57A44;
+    --text-xl: #D6F5FF;
+    --text-3xl: #E3D985;
+    --focusBtnBorder: #7EE081;
+    --focusBtnText: #7EE081;
+    --focusBtnHover: #C3F3C0;
+    --NavBarIcon:#DABFFF;
+    --NavBarLink:#D6F5FF;
+
   }
 }
 
-
-.fira-code {
-    font-family: "Fira Code", serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
 
   
