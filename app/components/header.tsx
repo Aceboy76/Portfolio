@@ -10,10 +10,19 @@ import {
 import Navbar from './navbar';
 import { Button } from './ui/button';
 import { Switch } from './ui/switch';
+import useThemeContext from '~/context/themeContext';
 
 
 
 export default function Header() {
+    const { setTheme, theme } = useThemeContext()
+
+    const toggleTheme = () => {
+        const newTheme = theme === "" ? "dark" : "";
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme);
+    };
+
 
     return (
         <>
@@ -22,22 +31,24 @@ export default function Header() {
                 {/* mobile */}
 
                 <div className='w-full h-full p-5 space-y-5 laptop:hidden'>
-                    <div className=" flex justify-between ">
+                    <div className=" flex justify-between text-[var(--NavBarIcon)]">
 
                         <div className='flex space-x-4'>
-                            <Github size={32} color="#DABFFF" />
-                            <Facebook size={32} color="#DABFFF" />
-                            <Mail size={32} color="#DABFFF" />
+                            <Github size={32} />
+                            <Facebook size={32} />
+                            <Mail size={32} />
                         </div>
 
                         <div className='flex items-center space-x-3'>
-                            <Switch className='w-14 h-7 '
+                            <Switch className='w-14 h-7'
+                                checked={theme === 'dark'}
+                                onCheckedChange={toggleTheme}
                             />
                             <DropdownMenu>
                                 <DropdownMenuTrigger>
-                                    <Menu size={32} color="#DABFFF" />
+                                    <Menu size={32} className='text-[var(--NavBarIcon)]' />
                                 </DropdownMenuTrigger>
-                                <DropdownMenuContent className="text-[#D6F5FF] fira-code mx-5 bg-gray-900 bg-opacity-75 backdrop-blur-md">
+                                <DropdownMenuContent className="text-[var(--NavBarLink)] bg-[var(--dropDownBg)] fira-code mx-5 ">
                                     <DropdownMenuLabel>Explore the site with</DropdownMenuLabel>
                                     <DropdownMenuSeparator />
                                     <DropdownMenuItem >Github</DropdownMenuItem>
@@ -54,21 +65,21 @@ export default function Header() {
                     </div>
 
                     <div className='lg:hidden flex flex-col'>
-                        <div className='text-lg text-[#D6F5FF]'>
+                        <div className='text-lg text-[var(--text-xl)]'>
                             Hi!, my name is
                         </div>
-                        <div className='text-3xl font-semibold text-[#E57A44]'>
+                        <div className='text-3xl font-semibold text-[var(--text-5)]'>
                             Harth Pama Palaras
                         </div>
 
-                        <div className='text-xl font-semibold text-[#E3D985] mt-7'>
+                        <div className='text-xl font-semibold text-[var(--text-3xl)] mt-7'>
                             Creating web solutions
                         </div>
-                        <div className='text-base  text-[#D6F5FF]'>
+                        <div className='text-base  text-[var(--text-xl)]'>
                             Fresh graduate and passionate programmer eager to create dynamic, user-friendly solutions and grow as a full stack developer.
                         </div>
                         <div className='mt-8'>
-                            <Button className=' text-xl font-bold p-4 border-2 border-[#E3D985] text-[#E57A44]'>Check my resume!</Button>
+                            <Button className='bg-[var(--background)] text-xl font-bold p-4 border-2 border-[var(--focusBtnBorder)] text-[var(--focusBtnText)]'>Check my resume!</Button>
                         </div>
                     </div>
 

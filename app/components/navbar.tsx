@@ -19,6 +19,7 @@ export default function Navbar() {
     return (
         <>
             <div className="w-full py-5 flex justify-between items-center ">
+                
                 <div className="flex space-x-10 text-[var(--NavBarIcon)]">
 
                     <Link to={'https://github.com/Aceboy76'} className='transition-transform  ease-in-out hover:scale-110' target='_blank'>

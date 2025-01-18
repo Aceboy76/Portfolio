@@ -51,6 +51,7 @@
     --text-3xl: #d6c52d;
     --NavBarIcon:#8c5bd2;
     --NavBarLink:#8c5bd2;
+    --dropDownBg: #ffffff;
 
   }
 
@@ -87,6 +88,7 @@
     --focusBtnHover: #C3F3C0;
     --NavBarIcon:#DABFFF;
     --NavBarLink:#D6F5FF;
+    --dropDownBg: #1C2321;
 
   }
 }
