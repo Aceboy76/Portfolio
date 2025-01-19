@@ -1,64 +1,21 @@
-import { Menu, Github, Facebook, Mail } from 'lucide-react';
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-} from "../components/ui/dropdown-menu"
 import Navbar from './navbar';
 import { Button } from './ui/button';
-import { Switch } from './ui/switch';
-import useThemeContext from '~/context/themeContext';
 
 
 
 export default function Header() {
-    const { setTheme, theme } = useThemeContext()
-
-    const toggleTheme = () => {
-        const newTheme = theme === "" ? "dark" : "";
-        setTheme(newTheme);
-        localStorage.setItem('theme', newTheme);
-    };
-
 
     return (
         <>
             <div className={`bg-[var(--background)] w-screen h-screen fira-code`}>
 
                 {/* mobile */}
+                <div className="laptop:hidden">
+                    <Navbar />
+                </div>
+
 
                 <div className='w-full h-full p-5 space-y-5 laptop:hidden'>
-                    <div className=" flex justify-between text-[var(--NavBarIcon)]">
-
-                        <div className='flex space-x-4'>
-                            <Github size={32} />
-                            <Facebook size={32} />
-                            <Mail size={32} />
-                        </div>
-
-                        <div className='flex items-center space-x-3'>
-                            <Switch className='w-14 h-7'
-                                checked={theme === 'dark'}
-                                onCheckedChange={toggleTheme}
-                            />
-                            <DropdownMenu>
-                                <DropdownMenuTrigger>
-                                    <Menu size={32} className='text-[var(--NavBarIcon)]' />
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent className="text-[var(--NavBarLink)] bg-[var(--dropDownBg)] fira-code mx-5 ">
-                                    <DropdownMenuLabel>Explore the site with</DropdownMenuLabel>
-                                    <DropdownMenuSeparator />
-                                    <DropdownMenuItem >Github</DropdownMenuItem>
-                                    <DropdownMenuItem>facebook</DropdownMenuItem>
-                                    <DropdownMenuItem>Email</DropdownMenuItem>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        </div>
-
-                    </div>
 
                     <div className='lg:hidden'>
                         <img src='/harth.png' alt='harth' className='rounded-full ' />

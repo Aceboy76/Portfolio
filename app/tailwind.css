@@ -48,10 +48,10 @@
     --focusBtnHover: #356237;
     --text-5: #c3674b;
     --text-xl: #393939;
-    --text-3xl: #d6c52d;
+    --text-3xl: #938821;
     --NavBarIcon:#8c5bd2;
     --NavBarLink:#8c5bd2;
-    --dropDownBg: #ffffff;
+    --DropDownBg: #ffffff;
 
   }
 
@@ -87,8 +87,8 @@
     --focusBtnText: #7EE081;
     --focusBtnHover: #C3F3C0;
     --NavBarIcon:#DABFFF;
-    --NavBarLink:#D6F5FF;
-    --dropDownBg: #1C2321;
+    --NavBarLink:#DABFFF;
+    --DropDownBg: #063124;
 
   }
 }
