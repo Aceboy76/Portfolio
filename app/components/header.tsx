@@ -1,3 +1,4 @@
+import { Link } from 'lucide-react';
 import Navbar from './navbar';
 import { Button } from './ui/button';
 
@@ -7,7 +8,7 @@ export default function Header() {
 
     return (
         <>
-            <div className={`bg-[var(--background)] w-screen h-screen fira-code`}>
+            <div className={`bg-[var(--background)] w-screen h-screen `}>
 
                 {/* mobile */}
                 <div className="laptop:hidden">
@@ -36,7 +37,9 @@ export default function Header() {
                             Fresh graduate and passionate programmer eager to create dynamic, user-friendly solutions and grow as a full stack developer.
                         </div>
                         <div className='mt-8'>
-                            <Button className='bg-[var(--background)] text-xl font-bold p-4 border-2 border-[var(--focusBtnBorder)] text-[var(--focusBtnText)]'>Check my resume!</Button>
+                            <a href={'HARTH_PALARAS_RESUME.pdf'} download={'HARTH_PALARAS_RESUME'}>
+                                <Button className='bg-[var(--background)] text-xl font-bold p-4 border-2 border-[var(--focusBtnBorder)] text-[var(--focusBtnText)]'>Check my resume!</Button>
+                            </a>
                         </div>
                     </div>
 
@@ -61,12 +64,14 @@ export default function Header() {
                                 Fresh graduate and passionate programmer eager to create dynamic, user-friendly solutions and grow as a full stack developer.
                             </div>
                             <div className='mt-20'>
-                                <Button className='bg-[var(--background)] text-[var(--focusBtnText)] text-2xl font-bold p-6 transition-transform  ease-in-out hover:scale-110 border-2 border-[var(--focusBtnBorder)] hover:text-[var(--focusBtnHover)] z-10 absolute' variant={'secondary'}>Check my resume!</Button>
+                                <a href={'HARTH_PALARAS_RESUME.pdf'} download={'HARTH_PALARAS_RESUME'}>
+                                    <Button className='bg-[var(--background)] text-[var(--focusBtnText)] text-2xl font-bold p-6 transition-transform  ease-in-out hover:scale-110 border-2 border-[var(--focusBtnBorder)] hover:text-[var(--focusBtnHover)] z-10 absolute' variant={'secondary'}>Check my resume!</Button>
+                                </a>
+
                             </div>
                         </div>
 
                         <div className=' w-1/2'>
-
                             <img src='/harth.png' alt='harth' className='rounded-full ' />
                         </div>
                     </div>

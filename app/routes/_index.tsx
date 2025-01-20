@@ -17,7 +17,7 @@ export default function Index() {
   return (
     <>
       <ThemeProviderClient/>
-      <div className={`flex flex-col overflow-x-hidden ${theme}`}>
+      <div className={`flex flex-col overflow-x-hidden ${theme} fira-code`}>
         <Header />
         <About />
       </div>

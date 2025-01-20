@@ -52,6 +52,7 @@
     --NavBarIcon:#8c5bd2;
     --NavBarLink:#8c5bd2;
     --DropDownBg: #ffffff;
+    --tags: #ff0000aa;
 
   }
 
@@ -89,7 +90,7 @@
     --NavBarIcon:#DABFFF;
     --NavBarLink:#DABFFF;
     --DropDownBg: #063124;
-
+    --tags: #db745d;
   }
 }
 
