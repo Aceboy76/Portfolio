@@ -1,5 +1,6 @@
 import {
   Links,
+  LiveReload,
   Meta,
   Outlet,
   Scripts,
@@ -7,11 +8,12 @@ import {
 } from "@remix-run/react";
 import type { LinksFunction } from "@remix-run/node";
 
-import "./tailwind.css";
+import styles from "./tailwind.css?url"
 import React from "react";
 import { ThemeProvider } from "./context/themeContext";
 
 export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: styles },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -36,7 +38,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         <ThemeProvider>
-        {children}
+          <LiveReload />
+
+          {children}
         </ThemeProvider>
         <ScrollRestoration />
         <Scripts />
@@ -47,8 +51,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
 
-  
+
   return (
-      <Outlet />
+    <Outlet />
   )
 }

@@ -4,7 +4,7 @@ export default function About() {
     return (
         <>
 
-            <div className={`bg-[var(--background)] w-screen h-fit py-40`}>
+            <div className={`bg-[var(--background)] w-screen h-fit py-20`}>
 
                 {/* mobile */}
                 <div className="w-full h-full p-5 flex flex-col items-center laptop:hidden space-y-20">
@@ -91,12 +91,12 @@ export default function About() {
                 <div className="hidden w-full px-40 laptop:flex flex-col space-y-20">
 
                     <div className="space-y-4">
-                        <div className='text-3xl font-semibold text-center  text-[var(--text-3xl)] mt-10'>
+                        <p className='text-3xl font-semibold text-center text-[var(--text-3xl)] mt-10'>
                             Education
-                        </div>
+                        </p>
 
                         <div className="flex flex-row space-x-8">
-                            <Card className="border-none h-fit w-full shadow-2xl">
+                            <Card className="border-none h-fit w-full shadow-lg">
                                 <CardHeader className="px-0 pt-0">
                                     <CardDescription>
                                         <img src="https://www.sti.edu/cms/images/school/all/tacurong.jpg" className="w-full h-80  object-cover rounded-t-2xl" />
@@ -111,7 +111,7 @@ export default function About() {
                                 </CardFooter>
                             </Card>
 
-                            <Card className="border-none h-fit w-full shadow-2xl">
+                            <Card className="border-none h-fit w-full shadow-lg">
                                 <CardHeader className="px-0 pt-0">
                                     <CardDescription>
                                         <img src="https://th.bing.com/th/id/OIP.4RJ5hAq7GbnQuGzr6aWxgwHaEK?rs=1&pid=ImgDetMain" className="w-full h-80 object-cover rounded-t-2xl" />
@@ -133,7 +133,7 @@ export default function About() {
                         <div className='text-3xl font-semibold text-center text-[var(--text-3xl)] mt-10'>
                             Achivements
                         </div>
-                        <div className="flex flex-row shadow-2xl">
+                        <div className="flex flex-row shadow-lg">
                             <Card className=" rounded-b-none border-none h-fit w-full ">
                                 <CardHeader className="px-0 pt-0">
                                     <CardDescription>
